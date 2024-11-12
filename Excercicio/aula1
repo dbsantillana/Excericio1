@@ -1,0 +1,26 @@
+#!/bin/bah
+
+#read -p "Digite o diretório destino:"
+
+#echo "Introduzido pelo utilizador"
+#echo $dir
+
+echo "Caminho passado por parametro"
+echo $1
+
+if [ -d "$1" ]; then
+    echo "existe"
+    cd "$1"
+
+else
+    echo "Nao existe"
+    exit 1
+fi
+
+echo "Conteudo do diretorio"
+ls -la
+ mkdir -p backup
+
+ mv *.txt backup/
+
+ echo "Ficheiros movidos"
